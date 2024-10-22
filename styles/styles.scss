@@ -33,7 +33,7 @@ body {
             gap: 24px;
         }
     }
-    .banner {
+    .banner-top {
         height: 64vh;
         background-image: url("../images/test2.jpg");
         background-color: #777575;
@@ -57,42 +57,54 @@ body {
             font-size: 24px;
         }
     }
-    .container-items {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 20px;
-        padding: 24px 150px;
-    
-    
-        .card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 16px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        height: 200px;
-        height: fit-content;
-        }
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+       
+        justify-content: space-around;
+        gap: 48px;
+        .container-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 24px 150px;
         
-        .card-img {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-        }
         
-        .card-title {
-        font-size: 1.2em;
-        margin: 10px 0;
+            .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 200px;
+            height: fit-content;
+            }
+            
+            .card-img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            }
+            
+            .card-title {
+            font-size: 1.2em;
+            margin: 10px 0;
+            }
+            
+            .card-description {
+            font-size: 0.9em;
+            margin: 10px 0;
+            }
+            
+            .card-price {
+            font-weight: bold;
+            font-size: 1.1em;
+            }
         }
-        
-        .card-description {
-        font-size: 0.9em;
-        margin: 10px 0;
-        }
-        
-        .card-price {
-        font-weight: bold;
-        font-size: 1.1em;
+        aside {
+            width: 200px;
+            padding: 100px 0px;
+
         }
     }
 }

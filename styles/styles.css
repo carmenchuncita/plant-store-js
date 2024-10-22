@@ -58,8 +58,8 @@ body header .icons {
   align-items: center;
   gap: 24px;
 }
-html .banner,
-body .banner {
+html .banner-top,
+body .banner-top {
   height: 64vh;
   background-image: url("../images/test2.jpg");
   background-color: #777575;
@@ -73,25 +73,32 @@ body .banner {
   justify-content: center;
   gap: 12px;
 }
-html .banner h1,
-body .banner h1 {
+html .banner-top h1,
+body .banner-top h1 {
   color: #ffffff;
   font-size: 72px;
 }
-html .banner p,
-body .banner p {
+html .banner-top p,
+body .banner-top p {
   color: #ffffff;
   font-size: 24px;
 }
-html .container-items,
-body .container-items {
+html main,
+body main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  gap: 48px;
+}
+html main .container-items,
+body main .container-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
   padding: 24px 150px;
 }
-html .container-items .card,
-body .container-items .card {
+html main .container-items .card,
+body main .container-items .card {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
@@ -101,24 +108,29 @@ body .container-items .card {
   height: -moz-fit-content;
   height: fit-content;
 }
-html .container-items .card-img,
-body .container-items .card-img {
+html main .container-items .card-img,
+body main .container-items .card-img {
   width: 100%;
   height: auto;
   border-radius: 4px;
 }
-html .container-items .card-title,
-body .container-items .card-title {
+html main .container-items .card-title,
+body main .container-items .card-title {
   font-size: 1.2em;
   margin: 10px 0;
 }
-html .container-items .card-description,
-body .container-items .card-description {
+html main .container-items .card-description,
+body main .container-items .card-description {
   font-size: 0.9em;
   margin: 10px 0;
 }
-html .container-items .card-price,
-body .container-items .card-price {
+html main .container-items .card-price,
+body main .container-items .card-price {
   font-weight: bold;
   font-size: 1.1em;
+}
+html main aside,
+body main aside {
+  width: 200px;
+  padding: 100px 0px;
 }/*# sourceMappingURL=styles.css.map */
