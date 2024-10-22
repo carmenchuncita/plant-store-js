@@ -2,7 +2,7 @@ import { products } from './data.js';
 
 function buyProduct(product) {
   const $myCart = document.querySelector('.shopping-cart');
- $myCart.innerHTML += `<p class="row-cart">${product.nombre} - €${product.price.toFixed(2)}</p>`;
+ $myCart.innerHTML += `<p class="row-cart">${product.name} - €${product.price.toFixed(2)}</p>`;
   
 }
 
