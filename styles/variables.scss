@@ -1,0 +1,67 @@
+
+// SCSS Variables
+$primary-green: #2e4a21;
+$secondry-green: #8daa7a;
+$tertyary-green: #778669;
+$grey: #b9bcb3;
+$grey-secondary:#e3e4dc;
+$white: #ffffff;
+$black: #000000;
+$principal-font: 'Montserrat', sans-serif;
+$title-font: 'Handlee', cursive;
+
+// SCSS Mixins
+@mixin tablet {
+  @media (min-width: 576px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin superTablet {
+  @media (min-width: 993px) and (max-width: 1019px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1020px) {
+    @content;
+  }
+}
+
+
+// Mixins flex
+%flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+%column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Reset
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
