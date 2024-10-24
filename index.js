@@ -1,5 +1,6 @@
 import { products } from './data.js';
 var cart = [];  
+//@TODO errors, modals, display mycart
 
 function buyProduct(product) {
   let productInCart = cart.find(item => item.id === product.id);
@@ -38,7 +39,7 @@ function updateCart() {
       </div>`;
   });
 
-  // botones de restar
+  // rest buttons
   const $minusButtons = document.querySelectorAll('.restProductBtn');
   $minusButtons.forEach($minusButton => {
     $minusButton.addEventListener('click', (e) => {
@@ -48,13 +49,23 @@ function updateCart() {
     });
   });
 
-  // botones de sumar
+  // plus buttons
   const $plusButtons = document.querySelectorAll('.plusProductBtn');
   $plusButtons.forEach($plusButton => {
     $plusButton.addEventListener('click', (e) => {
       const productId = e.target.getAttribute('data-id');
       const productToSum = products.find(p => p.id === parseInt(productId));
       sumProduct(productToSum);
+    });
+  });
+
+  // delete buttons
+  const $deleteButtons = document.querySelectorAll('.deleteProductBtn');
+  $deleteButtons.forEach($deleteButton => {
+    $deleteButton.addEventListener('click', (e) => {
+      const productId = e.target.getAttribute('data-id');
+      const productToDelete = cart.find(p => p.id === parseInt(productId));
+      deleteProduct(productToDelete);
     });
   });
 }
@@ -92,6 +103,13 @@ function sumProduct(product) {
   } else {
     alert("El producto no está en el carrito");
   }
+}
+
+function deleteProduct(product) {
+  cart = cart.filter(item => item.id !== product.id);
+  product.stock += product.quantity; // Devuelve todo el stock del producto eliminado
+  
+  updateCart();
 }
 
 function renderCards(products) {
