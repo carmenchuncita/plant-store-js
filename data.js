@@ -3,6 +3,7 @@ export const products = [
       "name": "Cactus Espino de Oro",
       "description": "Un cactus resistente y fácil de cuidar con espinas doradas que le dan un aspecto único.",
       "price": 8.99,
+      "stock": 0, 
       "image": "/images/image-1.jpg"
     },
     {
@@ -10,6 +11,7 @@ export const products = [
       "name": "Lavanda Francesa",
       "description": "Aromática y perfecta para interiores o exteriores, ideal para relajarse y perfumar el hogar.",
       "price": 12.50,
+      "stock": 2, 
       "image": "/images/image-2.webp"
     },
     {
@@ -17,6 +19,7 @@ export const products = [
       "name": "Bonsái Ficus",
       "description": "Un bonsái de fácil mantenimiento, ideal para principiantes, con hojas pequeñas y brillantes.",
       "price": 29.99,
+      "stock": 3, 
       "image": "/images/image-3.webp"
     },
     {
@@ -24,6 +27,7 @@ export const products = [
       "name": "Orquídea Phalaenopsis Blanca",
       "description": "Una hermosa orquídea con flores blancas elegantes, perfecta para decorar cualquier espacio.",
       "price": 24.95,
+      "stock": 20, 
       "image": "/images/image-4.webp"
     },
     { 
@@ -31,6 +35,7 @@ export const products = [
       "name": "Suculenta Aloe Vera",
       "description": "Aloe Vera de fácil cuidado, con propiedades medicinales y un toque moderno.",
       "price": 7.99,
+      "stock": 20, 
       "image": "/images/image-5.webp"
     },
     {
@@ -38,6 +43,7 @@ export const products = [
       "name": "Helecho Boston",
       "description": "Un helecho frondoso que aporta frescura y verde a cualquier rincón del hogar.",
       "price": 14.50,
+      "stock": 20, 
       "image": "/images/image-6.webp"
     },
     {
@@ -45,6 +51,7 @@ export const products = [
       "name": "Cactus San Pedro",
       "description": "Cactus de crecimiento rápido, ideal para interior y exterior, con un toque rústico.",
       "price": 18.00,
+      "stock": 20, 
       "image": "/images/poto.jpg"
     },
   
@@ -53,6 +60,7 @@ export const products = [
       "name": "Bonsái Olivo",
       "description": "Bonsái de olivo, un símbolo de paz y longevidad, perfecto para coleccionistas.",
       "price": 49.99,
+      "stock": 20, 
       "image": "/images/poto.jpg"
     },
     {
@@ -60,6 +68,7 @@ export const products = [
       "name": "Orquídea Cymbidium Rosa",
       "description": "Orquídea de larga duración con flores rosadas y hojas verdes brillantes.",
       "price": 32.99,
+      "stock": 20, 
       "image": "/images/poto.jpg"
     },
     {
@@ -67,6 +76,7 @@ export const products = [
       "name": "Planta de Jade",
       "description": "Planta suculenta con hojas redondeadas y gruesas, símbolo de buena suerte.",
       "price": 9.99,
+      "stock": 20, 
       "image": "/images/poto.jpg"
 
     },
@@ -75,6 +85,7 @@ export const products = [
       "name": "Cactus Opuntia",
       "description": "Conocido como nopal o tuna, es un cactus con hojas planas y flores brillantes.",
       "price": 15.75,
+      "stock": 20, 
       "image": "/images/poto.jpg"
     },
  
@@ -83,6 +94,7 @@ export const products = [
       "name": "Planta Serpiente (Sansevieria)",
       "description": "Planta de bajo mantenimiento con hojas alargadas y verdes, ideal para purificar el aire.",
       "price": 14.99,
+      "stock": 20, 
       "image": "/images/poto.jpg"
     },
     {
@@ -90,6 +102,7 @@ export const products = [
       "name": "Cactus Euphorbia Trigona",
       "description": "Cactus con forma de árbol, ideal para decorar interiores.",
       "price": 17.50,
+      "stock": 20, 
       "image": "/images/poto.jpg"
     },
     {
@@ -97,6 +110,7 @@ export const products = [
         "name": "Rosa del Desierto (Adenium)",
         "description": "Una planta exótica con un tronco grueso y flores de colores vibrantes, perfecta para interiores soleados.",
         "price": 25.99,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -104,6 +118,7 @@ export const products = [
         "name": "Calathea Medallion",
         "description": "Planta con hojas grandes y coloridas que presentan patrones de verde, blanco y púrpura, ideal para añadir un toque tropical.",
         "price": 19.99,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -111,6 +126,7 @@ export const products = [
         "name": "Strelitzia (Ave del Paraíso)",
         "description": "Planta con flores que recuerdan a un pájaro exótico en pleno vuelo, ideal para espacios amplios y luminosos.",
         "price": 39.95,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -118,6 +134,7 @@ export const products = [
         "name": "Begonia Rex",
         "description": "Planta con hojas texturizadas y coloridas, que pueden ser de tonos rojos, verdes y plateados. Perfecta para la decoración interior.",
         "price": 15.50,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -125,6 +142,7 @@ export const products = [
         "name": "Flor de Loto Azul",
         "description": "Una planta acuática con flores azuladas impresionantes, ideal para estanques y jardines acuáticos.",
         "price": 29.99,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -132,6 +150,7 @@ export const products = [
         "name": "Orquídea Vanda Azul",
         "description": "Una orquídea única con flores azules vibrantes que aportan un toque exótico y lujoso.",
         "price": 44.99,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -139,6 +158,7 @@ export const products = [
         "name": "Maranta Tricolor",
         "description": "Planta con hojas de colores verde, rojo y púrpura, que se cierran por la noche, proporcionando un espectáculo visual.",
         "price": 18.50,
+        "stock": 20, 
         "image": "/images/poto.jpg"
 
     },
@@ -147,6 +167,7 @@ export const products = [
         "name": "Hoya Kerrii (Planta Corazón)",
         "description": "Planta suculenta con hojas en forma de corazón, ideal como regalo especial.",
         "price": 12.75,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -154,6 +175,7 @@ export const products = [
         "name": "Palmera Kentia",
         "description": "Palmera de interior de crecimiento lento con hojas largas y elegantes, perfecta para dar un toque tropical.",
         "price": 49.99,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     {
@@ -161,6 +183,7 @@ export const products = [
         "name": "Anthurium Rojo",
         "description": "Planta con flores rojas brillantes y hojas verdes en forma de corazón, ideal para interiores con poca luz.",
         "price": 27.50,
+        "stock": 20, 
         "image": "/images/poto.jpg"
     },
     { 
