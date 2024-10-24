@@ -1,6 +1,6 @@
 import { products } from './data.js';
 var cart = [];  
-//@TODO errors, modals, display mycart
+//@TODO errors, modals, display mycart, totals
 
 function buyProduct(product) {
   let productInCart = cart.find(item => item.id === product.id);
