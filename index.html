@@ -21,7 +21,7 @@
         <div class="icons">
             <i class="fa-solid fa-envelope"></i>
             <i class="fa-solid fa-phone"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
             <i class="fa-solid fa-user"></i>
         </div>
     </header>
@@ -33,8 +33,12 @@
         <section id="container-items" class="container-items">
     
         </section>
-        <aside id="shopping-cart" class="shopping-cart">
-            <p>este es mi carrito de compra</p>
+        <aside id="shopping-cart" class="shopping-cart hidden">
+            <p>Carrito de compra :</p>
+            <div class="row-cart"></div>
+            <p class="total-display"></p>
+            <button>Vaciar carrito</button>
+            <button>Finalizar Compra</button>
         </aside>
     </main>
     </section>

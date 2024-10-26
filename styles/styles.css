@@ -133,4 +133,31 @@ html main aside,
 body main aside {
   width: 400px;
   padding: 100px 0px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+html main aside .row-cart,
+body main aside .row-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+html main aside .row-cart .product-row,
+body main aside .row-cart .product-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+html main aside .row-cart .product-row .product-info,
+body main aside .row-cart .product-row .product-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+html .hidden,
+body .hidden {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

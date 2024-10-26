@@ -1,6 +1,15 @@
 import { products } from './data.js';
-var cart = [];  
-//@TODO errors, modals, display mycart, totals
+var cart = [];
+//@TODO errors, modals,hover cards
+const cartIcon = document.getElementById('cart-icon');
+const shoppingCart = document.getElementById('shopping-cart');
+
+
+function toggleCartVisibility() {
+  shoppingCart.classList.toggle('hidden');
+}
+cartIcon.addEventListener('click', toggleCartVisibility);
+
 
 function buyProduct(product) {
   let productInCart = cart.find(item => item.id === product.id);
@@ -22,44 +31,66 @@ function buyProduct(product) {
   }
 
   updateCart();
-
+  shoppingCart.classList.remove('hidden');
 }
 
 function updateCart() {
-  const $myCart = document.querySelector('.shopping-cart');
-  $myCart.innerHTML = '';  
+  const $rowCart = document.querySelector('.row-cart'); 
+  $rowCart.innerHTML = '';  
 
   cart.forEach(product => {
-    $myCart.innerHTML += `
-      <div class="row-cart">
-        ${product.name} - €${product.price.toFixed(2)} - X ${product.quantity}
+    $rowCart.innerHTML += `
+      <div class="product-row">
+        <span class="product-info">${product.name} - 
+          <span class="product-price">${product.price.toFixed(2)}€</span> 
+          X <span class="product-quantity">${product.quantity}</span>
+        </span>
         <button class="deleteProductBtn" data-id="${product.id}">Eliminar</button>
         <button class="plusProductBtn" data-id="${product.id}">+</button>
         <button class="restProductBtn" data-id="${product.id}">-</button>
       </div>`;
   });
 
-  // rest buttons
+  const total = totalPrice();
+  const $totalDisplay = document.querySelector('.total-display');
+  $totalDisplay.innerHTML = `Total: ${total.toFixed(2)} €`;
+
+  btnEventListeners();
+}
+
+function totalPrice() {
+  let total = 0;
+
+  cart.forEach(product => {
+    total += product.price * product.quantity;
+  });
+
+  return total;
+}
+
+function btnEventListeners() {
+
+  // Botones de restar
   const $minusButtons = document.querySelectorAll('.restProductBtn');
   $minusButtons.forEach($minusButton => {
     $minusButton.addEventListener('click', (e) => {
       const productId = e.target.getAttribute('data-id');
-      const productToRest = products.find(p => p.id === parseInt(productId));
+      const productToRest = cart.find(p => p.id === parseInt(productId));
       restProduct(productToRest);
     });
   });
 
-  // plus buttons
+  // Botones de sumar
   const $plusButtons = document.querySelectorAll('.plusProductBtn');
   $plusButtons.forEach($plusButton => {
     $plusButton.addEventListener('click', (e) => {
       const productId = e.target.getAttribute('data-id');
-      const productToSum = products.find(p => p.id === parseInt(productId));
+      const productToSum = cart.find(p => p.id === parseInt(productId));
       sumProduct(productToSum);
     });
   });
 
-  // delete buttons
+  // Botones de eliminar
   const $deleteButtons = document.querySelectorAll('.deleteProductBtn');
   $deleteButtons.forEach($deleteButton => {
     $deleteButton.addEventListener('click', (e) => {
@@ -78,7 +109,7 @@ function restProduct(product) {
       productInCart.quantity -= 1;
       product.stock += 1;
     } else {
-      // Si solo queda una unidad, eliminarlo del carrito
+      // Si solo queda una unidad, eliminarlo del carrito despues de restar
       cart = cart.filter(item => item.id !== product.id);
       product.stock += 1;
     }
@@ -92,7 +123,7 @@ function sumProduct(product) {
   let productInCart = cart.find(item => item.id === product.id);
 
   if (productInCart) {
-    // Solo aumentar si hay stock 
+    // Solo aumentar si hay stock
     if (product.stock > 0) {  
       productInCart.quantity += 1;
       product.stock -= 1;
@@ -107,8 +138,7 @@ function sumProduct(product) {
 
 function deleteProduct(product) {
   cart = cart.filter(item => item.id !== product.id);
-  product.stock += product.quantity; // Devuelve todo el stock del producto eliminado
-  
+  product.stock += product.quantity; 
   updateCart();
 }
 

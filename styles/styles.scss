@@ -104,7 +104,34 @@ body {
         aside {
             width: 400px;
             padding: 100px 0px;
+            gap: 12px;
+            display: flex;
+            flex-direction: column;
+            .row-cart {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                .product-row {
+                    display: flex;
+                    align-items: center;
+                    gap:6px;
+
+                    .product-info {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 4px;
+                    }
+                    .product-price {
+                        
+                    }
+                }
+            }
 
         }
     }
+    .hidden {
+        display: none;
+      }
 }
