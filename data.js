@@ -1,10 +1,10 @@
 export const products = [
   { 
     "id":1,
-    "name": "Miniplanta™ de Philodendron ‘Prince of Orange",
-    "description": "Miniplanta de Philodendron ‘Prince of Orange",
+    "name": "Miniplanta de Philodendron Prince of Orange",
+    "description": "Es una planta compacta y llamativa, conocida por sus hojas jóvenes que emergen en tonos anaranjados brillantes, que van cambiando a tonos verdes y dorados a medida que maduran.",
     "price": 12.99,
-    "stock": 20, 
+    "stock": 4, 
     "image": "/images/image-1.jpg"
   },
     { 
@@ -12,7 +12,7 @@ export const products = [
         "name": "Ficus Elastica (Planta de Caucho)", 
         "description": "Planta de hojas gruesas y brillantes, resistente y fácil de cuidar.", 
         "price": 24.99, 
-        "stock": 6, 
+        "stock": 2, 
         "image": "/images/image-2.jpg"
       },
   
@@ -26,7 +26,7 @@ export const products = [
     },
     {
       "id":4,
-      "name": "Miniárbol™ de Pino Italiano",
+      "name": "Miniárbol de Pino Italiano",
       "description": "El Pino Piñonero Italiano (Pinus pinea) es un árbol mediterráneo conocido por su aspecto ornamental y sus deliciosos piñones.",
       "price": 216.95,
       "stock": 20, 

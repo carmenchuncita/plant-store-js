@@ -11,7 +11,7 @@
             gap: 12px;
     
             a {
-                font-size: 18px;
+                font-size: 24px;
                 color: $white;
             }
         }
@@ -20,72 +20,50 @@
     
     
     main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        gap: 48px;
        
         .container-items {
             padding: 100px;
             width: 100%;
+            gap:36px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          
     
     
             .card {
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                padding: 16px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                text-align: center;
-                height: 200px;
-                height: fit-content;
+                overflow: hidden;  
+                transition: transform 0.1s ease;
+    
+                &:hover {
+                    transform: scale(1.02);
+                }
+                
             }
     
-            .card-img {
-                width: 100%;
-                height: auto;
-                border-radius: 4px;
-            }
-    
-            .card-title {
-                font-size: 1.2em;
-                margin: 10px 0;
-            }
-    
-            .card-description {
-                font-size: 0.9em;
-                margin: 10px 0;
-            }
-    
-            .card-price {
-                font-weight: bold;
-                font-size: 1.1em;
-            }
         }
     
         aside {
-            width: 400px;
-            padding: 100px 0px;
-            gap: 12px;
-            display: flex;
-            flex-direction: column;
-    
+         min-width: 25%;
+        justify-content: flex-start;
+        background-color: #95ae7d42;
+        padding: 58px;
+
             .row-cart {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 6px;
+               width: 100%;
     
                 .product-row {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-    
+        
                     .product-info {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        gap: 4px;
+                   
                     }
     
                     .product-price {}
                 }
             }
+          
     
         }
     }

@@ -1,6 +1,6 @@
 import { products } from './data.js';
 var cart = [];
-//@TODO errors, modals,hover cards
+//@TODO errors,
 const cartIcon = document.getElementById('cart-icon');
 const shoppingCart = document.getElementById('shopping-cart');
 
@@ -11,6 +11,7 @@ function toggleCartVisibility() {
 cartIcon.addEventListener('click', toggleCartVisibility);
 
 
+
 function buyProduct(product) {
   let productInCart = cart.find(item => item.id === product.id);
 
@@ -19,36 +20,45 @@ function buyProduct(product) {
       alert("No quedan suficientes productos en stock");
     } else {
       productInCart.quantity++;
-      product.stock -= 1;  
+      product.stock -= 1;
     }
   } else {
     if (product.stock <= 0) {
       alert("No quedan productos en stock");
     } else {
-      cart.push({...product, quantity: 1});
+      cart.push({ ...product, quantity: 1 });
       product.stock -= 1;
     }
   }
 
   updateCart();
-  shoppingCart.classList.remove('hidden');
+  if (product.stock > 0) {
+    shoppingCart.classList.remove('hidden');
+  }
+  shoppingCart.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function updateCart() {
-  const $rowCart = document.querySelector('.row-cart'); 
-  $rowCart.innerHTML = '';  
+  const $rowCart = document.querySelector('.row-cart');
+  $rowCart.innerHTML = '';
 
   cart.forEach(product => {
     $rowCart.innerHTML += `
-      <div class="product-row">
-        <span class="product-info">${product.name} - 
-          <span class="product-price">${product.price.toFixed(2)}€</span> 
-          X <span class="product-quantity">${product.quantity}</span>
-        </span>
-        <button class="deleteProductBtn" data-id="${product.id}">Eliminar</button>
-        <button class="plusProductBtn" data-id="${product.id}">+</button>
-        <button class="restProductBtn" data-id="${product.id}">-</button>
-      </div>`;
+    <div class="product-row">
+      <img class="product-img" src="${product.image}" alt="${product.name}">
+
+      <div class="product-info">
+          <p class="product-name">${product.name} </p>
+          <div class="product-price">
+            <p>${product.price.toFixed(2)}€ - X <span class="product-quantity">${product.quantity}</span></p> 
+              <div class="product-btns">
+                  <button class="deleteProductBtn" data-id="${product.id}">Eliminar</button>
+                  <button class="plusProductBtn" data-id="${product.id}">+</button>
+                  <button class="restProductBtn" data-id="${product.id}">-</button>
+              </div>
+          </div>
+      </div>
+    </div>`;
   });
 
   const total = totalPrice();
@@ -124,7 +134,7 @@ function sumProduct(product) {
 
   if (productInCart) {
     // Solo aumentar si hay stock
-    if (product.stock > 0) {  
+    if (product.stock > 0) {
       productInCart.quantity += 1;
       product.stock -= 1;
     } else {
@@ -138,13 +148,27 @@ function sumProduct(product) {
 
 function deleteProduct(product) {
   cart = cart.filter(item => item.id !== product.id);
-  product.stock += product.quantity; 
+  product.stock += product.quantity;
   updateCart();
+}
+
+function emptyCart(){
+  shoppingCart.innerHTML = "";
+  updateCart();
+}
+const emptyBtn = document.getElementById('empty-cart');
+emptyBtn.addEventListener('click', emptyCart);
+
+const finalizeBtn = document.getElementById('btn-finalize');
+finalizeBtn.addEventListener('click', finalize);
+
+function finalize() {
+  alert('Tu compra ha sido realizada correctamente');
 }
 
 function renderCards(products) {
   const container = document.getElementById('container-items');
-  
+
   products.forEach(product => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -153,7 +177,7 @@ function renderCards(products) {
       <div class="card-content">
         <h2 class="card-title">${product.name}</h2>
         <p class="card-description">${product.description}</p>
-        <p class="card-price">Precio: €${product.price.toFixed(2)}</p>
+        <p class="card-price">Precio: ${product.price.toFixed(2)} €</p>
         <button class="buy-button">Comprar</button>
       </div>
     `;

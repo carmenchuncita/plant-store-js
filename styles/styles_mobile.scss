@@ -22,13 +22,20 @@ header {
         display: flex;
         align-items: center;
         gap: 24px;
+
+       .fa-solid.fa-cart-shopping {
+            &:hover {
+                color: $grey;
+            }
+        }
     }
 }
 
 .banner-top {
-    height: 36vh;
+    // height: 36vh;
+    height: 44vh;;
     background-image: url("../images/test2.jpg");
-    background-color: #777575;
+    background-color: #c5c5c5;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -41,7 +48,7 @@ header {
 
     h1 {
         color: $white;
-        font-size: 72px;
+        font-size: 64px;
     }
 
     p {
@@ -52,77 +59,155 @@ header {
 
 main {
     display: flex;
-    flex-direction: row-reverse;
-
+    flex-direction: column-reverse;
     justify-content: space-around;
-    gap: 48px;
+    gap: 0px;
 
     .container-items {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
         gap: 20px;
         padding: 24px;
 
 
         .card {
-            border: 1px solid #ccc;
+            border: 1px solid $grey;
             border-radius: 8px;
             padding: 16px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-            height: 200px;
-            height: fit-content;
+            min-height: 612px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card-img {
+                // max-height: 62%;
+                border-radius: 6px;
+            }
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+               padding-top: 12px;
+
+                .card-title {
+                    font-size: 24px;
+                }
+        
+                .card-description {
+                    font-size: 18px;
+                }
+        
+                .card-price {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .buy-button {
+                    width: 100%;
+                    background-color: $primary-green;
+                    border:none;
+                    padding: 12px;
+                    color: $white;
+                    font-weight: 600;
+                    border-radius: 6px;
+                    font-size: 18px;
+                    cursor: pointer;
+                  
+
+                    &:hover {
+                        background-color: $secondry-green;
+                    }
+                }
+            }
         }
 
-        .card-img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .card-title {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
-        .card-description {
-            font-size: 0.9em;
-            margin: 10px 0;
-        }
-
-        .card-price {
-            font-weight: bold;
-            font-size: 1.1em;
-        }
     }
 
     aside {
-        width: 400px;
-        padding: 100px 0px;
+        padding: 24px;
         gap: 12px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
 
+        .title {
+            font-weight: 700;
+            font-size: 28px;
+        }
         .row-cart {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 6px;
+            gap: 12px;
+            padding-top: 12px;
 
             .product-row {
                 display: flex;
-                align-items: center;
-                gap: 6px;
+                align-items: flex-end;
+                gap: 16px;
+                border: 1px solid $grey;
+                padding: 12px;
+                border-radius: 4px;
+                width: 100%;
 
+                .product-img {
+                    max-width: 58px;
+                }
                 .product-info {
                     display: flex;
-                    flex-direction: row;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
                     gap: 4px;
-                }
 
-                .product-price {}
+                    .product-name {
+                        font-weight: 600;
+                    }
+                    .product-price {
+                        display: flex;
+                        gap: 12px;
+                        align-items: flex-end;
+                        color: $primary-green;
+                        font-weight: 700;
+
+                        .product-btns {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+
+                            .deleteProductBtn,.plusProductBtn,.restProductBtn {
+                                background: $tertiary-green;
+                                border: none;
+                                padding: 8px;
+                                border-radius: 4px;
+                                color: $white;
+                                font-weight: 600;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+               
+              
+
             }
+        }
+        .total-display {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 12px 0px;
+        }
+        .empty-cart,.finalize-purchase {
+            background: $primary-green;
+            width: 100%;
+            border: none;
+            padding: 12px;
+            color: #ffffff;
+            font-weight: 600;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
         }
 
     }

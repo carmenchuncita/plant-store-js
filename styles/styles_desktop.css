@@ -27,63 +27,36 @@ h6 {
     gap: 12px;
   }
   header .links a {
-    font-size: 18px;
+    font-size: 24px;
     color: #ffffff;
+  }
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    gap: 48px;
   }
   main .container-items {
     padding: 100px;
     width: 100%;
+    gap: 36px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
   main .container-items .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 200px;
-    height: -moz-fit-content;
-    height: fit-content;
+    overflow: hidden;
+    transition: transform 0.1s ease;
   }
-  main .container-items .card-img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  main .container-items .card-title {
-    font-size: 1.2em;
-    margin: 10px 0;
-  }
-  main .container-items .card-description {
-    font-size: 0.9em;
-    margin: 10px 0;
-  }
-  main .container-items .card-price {
-    font-weight: bold;
-    font-size: 1.1em;
+  main .container-items .card:hover {
+    transform: scale(1.02);
   }
   main aside {
-    width: 400px;
-    padding: 100px 0px;
-    gap: 12px;
-    display: flex;
-    flex-direction: column;
+    min-width: 25%;
+    justify-content: flex-start;
+    background-color: rgba(149, 174, 125, 0.2588235294);
+    padding: 58px;
   }
   main aside .row-cart {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-  main aside .row-cart .product-row {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  main aside .row-cart .product-row .product-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
+    width: 100%;
   }
   .hidden {
     display: none;
