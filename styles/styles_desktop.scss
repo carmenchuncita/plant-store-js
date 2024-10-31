@@ -1,74 +1,94 @@
 @import "./variables.scss";
 
 @include desktop {
+  header {
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
-    header {
-        
-    
-        .links {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-    
-            a {
-                font-size: 24px;
-                color: $white;
-            }
-        }
-
+      a {
+        font-size: 24px;
+        color: $white;
+      }
     }
-    
-    
-    main {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        gap: 48px;
-       
-        .container-items {
-            padding: 100px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    gap: 48px;
+
+    .container-items {
+      padding: 70px;
+      width: 100%;
+      gap: 36px;
+      grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+
+      .card {
+        overflow: hidden;
+        transition: transform 0.1s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    aside {
+      justify-content: flex-start;
+      // background-color: #95ae7d42;
+      padding: 58px;
+     
+
+      .row-cart {
+        width: 100%;
+
+        .product-row {
+          width: 100%;
+          min-width: 350px;
+
+          .product-img {
+            max-width: 70px;
+          }
+          .product-info {
             width: 100%;
-            gap:36px;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-          
-    
-    
-            .card {
-                overflow: hidden;  
-                transition: transform 0.1s ease;
-    
-                &:hover {
-                    transform: scale(1.02);
-                }
-                
-            }
-    
-        }
-    
-        aside {
-         min-width: 25%;
-        justify-content: flex-start;
-        background-color: #95ae7d42;
-        padding: 58px;
 
-            .row-cart {
-               width: 100%;
-    
-                .product-row {
-        
-                    .product-info {
-                   
-                    }
-    
-                    .product-price {}
-                }
+            .product-name {
+              font-size: 20px;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              max-width: 200px;
             }
-          
-    
+            .product-price {
+              width: 100%;
+              justify-content: space-between;
+              
+              p {
+                font-size: 18px;
+              }
+            }
+            .product-btns {
+              .deleteProductBtn,
+              .plusProductBtn,
+              .restProductBtn {
+                font-size: 18px;
+              }
+            }
+          }
         }
+      }
     }
-    
-    .hidden {
-        display: none;
-    }
+  }
+
+  main:has(#shopping-cart:not(.hidden)) #container-items {
+    padding-left: 0px;
+  }
+
+  .hidden {
+    display: none;
+  }
 }

@@ -20,7 +20,7 @@ h6 {
   margin: 0;
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1300px) {
   header .links {
     display: flex;
     align-items: center;
@@ -37,10 +37,10 @@ h6 {
     gap: 48px;
   }
   main .container-items {
-    padding: 100px;
+    padding: 70px;
     width: 100%;
     gap: 36px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   }
   main .container-items .card {
     overflow: hidden;
@@ -50,13 +50,44 @@ h6 {
     transform: scale(1.02);
   }
   main aside {
-    min-width: 25%;
     justify-content: flex-start;
-    background-color: rgba(149, 174, 125, 0.2588235294);
     padding: 58px;
   }
   main aside .row-cart {
     width: 100%;
+  }
+  main aside .row-cart .product-row {
+    width: 100%;
+    min-width: 350px;
+  }
+  main aside .row-cart .product-row .product-img {
+    max-width: 70px;
+  }
+  main aside .row-cart .product-row .product-info {
+    width: 100%;
+  }
+  main aside .row-cart .product-row .product-info .product-name {
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    max-width: 200px;
+  }
+  main aside .row-cart .product-row .product-info .product-price {
+    width: 100%;
+    justify-content: space-between;
+  }
+  main aside .row-cart .product-row .product-info .product-price p {
+    font-size: 18px;
+  }
+  main aside .row-cart .product-row .product-info .product-btns .deleteProductBtn,
+  main aside .row-cart .product-row .product-info .product-btns .plusProductBtn,
+  main aside .row-cart .product-row .product-info .product-btns .restProductBtn {
+    font-size: 18px;
+  }
+  main:has(#shopping-cart:not(.hidden)) #container-items {
+    padding-left: 0px;
   }
   .hidden {
     display: none;

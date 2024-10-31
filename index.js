@@ -1,16 +1,15 @@
 import { products } from './data.js';
+
 var cart = [];
-//@TODO errors,
 const cartIcon = document.getElementById('cart-icon');
-const shoppingCart = document.getElementById('shopping-cart');
+var shoppingCart = document.getElementById('shopping-cart');
 
 
 function toggleCartVisibility() {
   shoppingCart.classList.toggle('hidden');
 }
+
 cartIcon.addEventListener('click', toggleCartVisibility);
-
-
 
 function buyProduct(product) {
   let productInCart = cart.find(item => item.id === product.id);
@@ -39,7 +38,7 @@ function buyProduct(product) {
 }
 
 function updateCart() {
-  const $rowCart = document.querySelector('.row-cart');
+  var $rowCart = document.querySelector('.row-cart');
   $rowCart.innerHTML = '';
 
   cart.forEach(product => {
@@ -152,10 +151,13 @@ function deleteProduct(product) {
   updateCart();
 }
 
-function emptyCart(){
-  shoppingCart.innerHTML = "";
-  updateCart();
+function emptyCart() {
+  console.log("shoppingCart", shoppingCart)
+  var $rowCart = document.querySelector('.row-cart');
+  $rowCart.innerHTML = '';
+  shoppingCart.classList.add('hidden');
 }
+
 const emptyBtn = document.getElementById('empty-cart');
 emptyBtn.addEventListener('click', emptyCart);
 

@@ -18,4 +18,60 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+@media (min-width: 576px) and (max-width: 1299px) {
+  main .container-items .card .card-content {
+    gap: 16px;
+  }
+  main .container-items .card .card-content .card-title {
+    font-size: 32px;
+  }
+  main .container-items .card .card-content .card-description {
+    font-size: 22px;
+  }
+  main .container-items .card .card-content .card-price {
+    font-size: 26px;
+  }
+  main .container-items .card .card-content .buy-button {
+    font-size: 22px;
+  }
+  main aside .row-cart {
+    gap: 12px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(353px, 1fr));
+    width: 100%;
+  }
+  main aside .row-cart .product-row {
+    min-width: 375px;
+  }
+  main aside .row-cart .product-row .product-img {
+    min-width: 80px;
+  }
+  main aside .row-cart .product-row .product-info {
+    width: 100%;
+  }
+  main aside .row-cart .product-row .product-info .product-name {
+    font-size: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    max-width: 174px;
+  }
+  main aside .row-cart .product-row .product-info .product-price {
+    justify-content: space-between;
+    width: 100%;
+  }
+  main aside .row-cart .product-row .product-info .product-price p {
+    font-size: 18px;
+    min-width: 92px;
+  }
+  main aside .row-cart .product-row .product-btns .deleteProductBtn,
+  main aside .row-cart .product-row .product-btns .plusProductBtn,
+  main aside .row-cart .product-row .product-btns .restProductBtn {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=styles_tablet.css.map */

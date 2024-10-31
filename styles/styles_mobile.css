@@ -46,7 +46,7 @@ header .icons .fa-solid.fa-cart-shopping:hover {
 }
 
 .banner-top {
-  height: 44vh;
+  height: 33%;
   background-image: url("../images/test2.jpg");
   background-color: #c5c5c5;
   background-size: cover;
@@ -97,6 +97,8 @@ main .container-items .card .card-img {
 main .container-items .card .card-content {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
   gap: 12px;
   padding-top: 12px;
 }
@@ -142,6 +144,7 @@ main aside .row-cart {
   align-items: flex-start;
   gap: 12px;
   padding-top: 12px;
+  width: 100%;
 }
 main aside .row-cart .product-row {
   display: flex;
@@ -160,9 +163,11 @@ main aside .row-cart .product-row .product-info {
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
+  width: 100%;
 }
 main aside .row-cart .product-row .product-info .product-name {
   font-weight: 600;
+  max-width: 250px;
 }
 main aside .row-cart .product-row .product-info .product-price {
   display: flex;
@@ -170,13 +175,17 @@ main aside .row-cart .product-row .product-info .product-price {
   align-items: flex-end;
   color: #2e4a21;
   font-weight: 700;
+  justify-content: space-between;
+  width: 100%;
 }
 main aside .row-cart .product-row .product-info .product-price .product-btns {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-main aside .row-cart .product-row .product-info .product-price .product-btns .deleteProductBtn, main aside .row-cart .product-row .product-info .product-price .product-btns .plusProductBtn, main aside .row-cart .product-row .product-info .product-price .product-btns .restProductBtn {
+main aside .row-cart .product-row .product-info .product-price .product-btns .deleteProductBtn,
+main aside .row-cart .product-row .product-info .product-price .product-btns .plusProductBtn,
+main aside .row-cart .product-row .product-info .product-price .product-btns .restProductBtn {
   background: #778669;
   border: none;
   padding: 8px;
@@ -190,7 +199,8 @@ main aside .total-display {
   font-weight: 600;
   padding: 12px 0px;
 }
-main aside .empty-cart, main aside .finalize-purchase {
+main aside .empty-cart,
+main aside .finalize-purchase {
   background: #2e4a21;
   width: 100%;
   border: none;
