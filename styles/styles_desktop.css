@@ -49,6 +49,9 @@ h6 {
   main .container-items .card:hover {
     transform: scale(1.02);
   }
+  main .container-items .card .card-content .buy-button:hover {
+    background-color: #8daa7a;
+  }
   main aside {
     justify-content: flex-start;
     padding: 58px;

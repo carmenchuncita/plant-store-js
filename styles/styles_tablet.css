@@ -40,14 +40,14 @@ h6 {
     gap: 12px;
     display: grid;
     gap: 12px;
-    grid-template-columns: repeat(auto-fit, minmax(353px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
     width: 100%;
   }
   main aside .row-cart .product-row {
     min-width: 375px;
   }
   main aside .row-cart .product-row .product-img {
-    min-width: 80px;
+    min-width: 75px;
   }
   main aside .row-cart .product-row .product-info {
     width: 100%;

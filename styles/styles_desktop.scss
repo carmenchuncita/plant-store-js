@@ -33,6 +33,13 @@
         &:hover {
           transform: scale(1.02);
         }
+        .card-content {
+          .buy-button {
+            &:hover {
+              background-color: $secondry-green;
+            }
+          }
+        }
       }
     }
 
