@@ -51,13 +51,14 @@
               -webkit-line-clamp: 2;
               line-clamp: 2;
               overflow: hidden;
+              text-overflow: ellipsis;
               max-width: 174px;
             }
 
             .product-price {
               justify-content: space-between;
               width: 100%;
-              
+
               p {
                 font-size: 18px;
                 min-width: 92px;

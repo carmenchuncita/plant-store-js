@@ -59,6 +59,7 @@ h6 {
     -webkit-line-clamp: 2;
     line-clamp: 2;
     overflow: hidden;
+    text-overflow: ellipsis;
     max-width: 174px;
   }
   main aside .row-cart .product-row .product-info .product-price {

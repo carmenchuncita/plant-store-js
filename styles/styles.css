@@ -297,7 +297,9 @@ h6 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
+    text-overflow: ellipsis;
     max-width: 174px;
   }
   main aside .row-cart .product-row .product-info .product-price {
@@ -356,7 +358,7 @@ h6 {
     padding: 70px;
     width: 100%;
     gap: 36px;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   }
   main .container-items .card {
     overflow: hidden;
@@ -374,7 +376,7 @@ h6 {
   }
   main aside .row-cart .product-row {
     width: 100%;
-    min-width: 350px;
+    min-width: 405px;
   }
   main aside .row-cart .product-row .product-img {
     max-width: 70px;
@@ -387,7 +389,10 @@ h6 {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    max-width: 200px;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 174px;
   }
   main aside .row-cart .product-row .product-info .product-price {
     width: 100%;
