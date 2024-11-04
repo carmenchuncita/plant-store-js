@@ -177,7 +177,9 @@ function emptyCart() {
   }
   const $totalDisplay = document.querySelector('.total-display');
   $totalDisplay.innerHTML = 'Total: 0.00 €';
-  shoppingCart.classList.add('hidden');
+  setTimeout(function(){   
+    shoppingCart.classList.add('hidden');
+  }, 2000);
 }
 
 const emptyBtn = document.getElementById('empty-cart');
