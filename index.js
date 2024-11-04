@@ -152,7 +152,6 @@ function deleteProduct(product) {
 }
 
 function emptyCart() {
-  console.log("shoppingCart", shoppingCart);
   cart = [];
 
   var $rowCart = document.querySelector('.row-cart');
