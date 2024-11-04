@@ -397,6 +397,7 @@ h6 {
   main aside .row-cart .product-row .product-info .product-price {
     width: 100%;
     justify-content: space-between;
+    font-size: 20px;
   }
   main aside .row-cart .product-row .product-info .product-price p {
     font-size: 18px;

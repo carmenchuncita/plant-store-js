@@ -152,9 +152,15 @@ function deleteProduct(product) {
 }
 
 function emptyCart() {
-  console.log("shoppingCart", shoppingCart)
+  console.log("shoppingCart", shoppingCart);
+  cart = [];
+
   var $rowCart = document.querySelector('.row-cart');
-  $rowCart.innerHTML = '';
+  if ($rowCart) {
+    $rowCart.innerHTML = ''; 
+  }
+  const $totalDisplay = document.querySelector('.total-display');
+  $totalDisplay.innerHTML = 'Total: 0.00 €';
   shoppingCart.classList.add('hidden');
 }
 
