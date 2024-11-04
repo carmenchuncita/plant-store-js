@@ -103,14 +103,14 @@ main .container-items .card .card-content {
   padding-top: 12px;
 }
 main .container-items .card .card-content .card-title {
-  font-size: 24px;
+  font-size: 22px;
 }
 main .container-items .card .card-content .card-description {
   font-size: 18px;
 }
 main .container-items .card .card-content .card-price {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 }
 main .container-items .card .card-content .buy-button {
   width: 100%;
