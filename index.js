@@ -151,6 +151,9 @@ function deleteProduct(product) {
   cart = cart.filter(item => item.id !== product.id);
   originalProduct.stock += product.quantity;
   updateCart();
+  if (cart.length <= 0) {
+    shoppingCart.classList.add('hidden');
+  }
 }
 
 function emptyCart() {
