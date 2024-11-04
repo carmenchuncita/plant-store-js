@@ -117,7 +117,7 @@ function restProduct(product) {
      // Si solo queda una unidad, eliminarlo del carrito despues de restar
       cart = cart.filter(item => item.id !== product.id);
       originalProduct.stock += 1;
-      console.log("cart.legth",cart.length)
+    
       if (cart.length <= 0) {
         shoppingCart.classList.add('hidden');
       }
