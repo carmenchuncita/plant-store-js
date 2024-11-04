@@ -118,9 +118,11 @@ function restProduct(product) {
       cart = cart.filter(item => item.id !== product.id);
       originalProduct.stock += 1;
     
-      if (cart.length <= 0) {
-        shoppingCart.classList.add('hidden');
-      }
+      setTimeout(function(){
+        if (cart.length <= 0) {
+          shoppingCart.classList.add('hidden');
+        }
+      }, 3000);
     }
     updateCart();
   } else {
@@ -151,9 +153,11 @@ function deleteProduct(product) {
   cart = cart.filter(item => item.id !== product.id);
   originalProduct.stock += product.quantity;
   updateCart();
-  if (cart.length <= 0) {
-    shoppingCart.classList.add('hidden');
-  }
+  setTimeout(function(){
+    if (cart.length <= 0) {
+      shoppingCart.classList.add('hidden');
+    }
+  }, 3000);
 }
 
 function emptyCart() {
